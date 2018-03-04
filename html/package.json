@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "copy-webpack-plugin": "^4.5.0",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.10"
+  },
+  "dependencies": {
+    "laconic": "^0.2.2",
+    "qrcode-generator-es6": "^1.1.3"
+  }
+}
