@@ -19,7 +19,7 @@ store_bucket = os.environ['SEND_BUCKET']
 
 
 def handler(event, context=0, callback=0):
-    if event.get('queryStringParameters', {}).get('t') != token:
+    if (event.get('queryStringParameters') or {}).get('t') != token:
         return dict(
             statusCode=403,
             body='Bad token',
