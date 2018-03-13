@@ -89,7 +89,7 @@ const show_address = e => {
         "Purchase via ",
         lc.a(
           {
-            href: "https://development.micromicro.cash"
+            href: "https://micromicro.cash"
           },
           "micromicro"
         )
@@ -113,7 +113,7 @@ const show_address = e => {
   })
     .then(r => r.text())
     .then(r => {
-      const uri = "https://development.micromicro.cash/app/index.html#in/" + r;
+      const uri = "https://micromicro.cash/app/index.html#in/" + r;
       const qr = new qrcode(0, "H");
       qr.addData(uri);
       qr.make();

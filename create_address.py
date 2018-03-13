@@ -28,7 +28,7 @@ def handler(event, context=0, callback=0):
     if not asset:
         raise RuntimeError('Unknown asset {}'.format(data['id']))
     resp = requests.post(
-        'https://api.development.micromicro.cash/v1/new_in',
+        'https://api.micromicro.cash/v1/new_in',
         json=dict(
             # micromicro username
             username=micromicro_username,
