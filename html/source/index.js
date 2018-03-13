@@ -70,7 +70,7 @@ const change_email = ({doAfter}) => {
 };
 
 const show_address = e => {
-  const addressMount = lc.div();
+  const mount = lc.div();
   const close = lc.button(
     {
       type: "submit",
@@ -80,21 +80,13 @@ const show_address = e => {
     },
     "Close"
   );
+  const container = lc.div();
   const popup = lc.div(
     {
       id: "popup"
     },
     lc.div(
-      lc.p(
-        "Purchase via ",
-        lc.a(
-          {
-            href: "https://micromicro.cash"
-          },
-          "micromicro"
-        )
-      ),
-      addressMount,
+      mount,
       lc.div(
         {
           class: "buttons"
@@ -129,6 +121,18 @@ const show_address = e => {
           href: uri
         },
         address
+      );
+      addressMount.replaceWith(
+        lc.p(
+          "Purchase via ",
+          lc.a(
+            {
+              href: uri
+            },
+            "micromicro"
+          )
+        ),
+        link
       );
       addressMount.parentNode.replaceChild(link, addressMount);
     })
