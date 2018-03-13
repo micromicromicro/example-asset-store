@@ -122,7 +122,7 @@ const show_address = e => {
         },
         address
       );
-      addressMount.replaceWith(
+      mount.replaceWith(
         lc.p(
           "Purchase via ",
           lc.a(
@@ -134,7 +134,6 @@ const show_address = e => {
         ),
         link
       );
-      addressMount.parentNode.replaceChild(link, addressMount);
     })
     .catch(e => {
       console.log(e);
